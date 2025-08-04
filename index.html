@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel='shortcut icon' type='image/x-icon' href='' />
+
+  <link href="css/pannellum.css" rel="stylesheet" type="text/css"/>
+  <link href="css/Components/components.css" rel="stylesheet" type="text/css" />
+
+  <link href="css/branding/brand_BT/brandingStyles.css" rel="stylesheet" type="text/css" />
+
+  <script>
+    window.FlashCanvasOptions = {
+                swfPath: "js/"
+            };
+  </script>
+
+  <script src="js/polyfills.js" type="text/javascript"></script>
+
+  <script src="js/libs/bowser.min.js" type="text/javascript"></script>
+  <script src="js/libs/flashcanvas.js" type="text/javascript"></script>
+  <script src="js/libs/ie-version.js" type="text/javascript"></script>
+  <script src="js/libs/intervals-timeouts-management.js" type="text/javascript"></script>
+  <script src="js/libs/iphone-inline-video.browser.js" type="text/javascript"></script>
+  <script src="js/libs/jsonpack.js" type="text/javascript"></script>
+  <script src="js/libs/SCORM_API_wrapper.js" type="text/javascript"></script>
+  <script src="js/libs/xml2json.min.js" type="text/javascript"></script>
+  <script src="js/libs/jQuery/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="js/libs/jQuery/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+  <script src="js/libs/jQuery/jquery.custom-scrollbar.min.js" type="text/javascript"></script>
+  <script src="js/libs/jQuery/jquery.easypiechart.js" type="text/javascript"></script>
+  <script src="js/libs/jQuery/jquery.easypiechart.min.js" type="text/javascript"></script>
+  <script src="js/libs/jQuery/jquery.scrollTo.js" type="text/javascript"></script>
+  <script src="js/libs/model-viewer.min.js" type="module"></script>
+  <script src="js/libs/pannellum.js" type="text/javascript"></script>
+
+  <script src="js/headLoaded/detectBrowser.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var HShell = window.HShell || {};
+                    var configJson = {"coreVersion":"2.0","brandName":"BT","courseCode":"EC","courseFullTitle":"Environmental Compliance","dataStorage":"SCORM 1.2","hasSeparatePackages":"true","hasExtranetPackage":"false","contentFolder":"../Content/content_Moded","devMode":false,"demoMode":true,"qaMode":true,"XMLcashing":false,"browserSupport":["IE7","IE8","IE9","IE10","IE11","Edge","Chrome","Safari"]};
+                    HShell.config = configJson;
+                    courseCode = configJson.courseCode;
+  </script>
+
+  <script>
+    var minScale = 0;
+                    var maxScale = 0;
+
+                    switch (new HShell.core.runningOn().deviceName) {
+                        case 'iphone': document.write('<meta name="viewport" content="user-scalable=yes,  width=600,  initial-scale=0">'); break;
+                        case 'windowsPhone': document.write('<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1, maximum-scale=1">'); break;
+                        case 'ipad':
+                            minScale = 1;
+                            maxScale = 1.5;
+                            document.write('<meta name="viewport" content="user-scalable=yes, minimum-scale=' + minScale + ', maximum-scale=' + maxScale + ', initial-scale=' + minScale + '">');
+                            break;
+                    }
+
+                    if(window.ieVersion.actingVersion < 9 && window.ieVersion.actingVersion != 0) {
+                    document.write('<script src="js/libs/PIE.js" type="text/javascript"></scr'+'ipt>');
+                }
+
+                    leftHead = true;
+  </script>
+</head>
+
+<body class="fullFrameHeight">
+  <div id="forced_speech_container" class="offScreen" aria-live="assertive" tabindex="-1"></div>
+
+  <div class="scripts">
+
+    <script src="js/scripts.js" type="text/javascript"></script>
+
+    <script src="js/components.js" type="text/javascript"></script>
+
+    <script src="js/clientSpecific/clientSpecific.js" type="text/javascript"></script>
+
+
+
+  </div>
+</body>
+
+</html>
